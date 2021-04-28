@@ -1,0 +1,33 @@
+// scss-var-colors
+$white:    #fff !default;
+$gray-100: #B9B9B9 !default;
+$gray-200: #8C8C8C !default;
+$gray-300: #404040 !default;
+
+$red: #FF1510 !default;
+$red-100: #FDECEC !default;
+
+$green-100: #E7F6E7 !default;
+
+// Typography
+
+$font-family-work-sans: 'Work Sans', sans-serifs !default;
+
+$font-weight-lighter:         lighter !default;
+$font-weight-light:           300 !default;
+$font-weight-normal:          400 !default;
+$font-weight-bold:            700 !default;
+$font-weight-bolder:          bolder !default;
+
+$font-size-base:              1rem !default;
+
+$h1-font-size:                $font-size-base * 2.3 !default;
+$h2-font-size:                $font-size-base * 2 !default;
+$h3-font-size:                $font-size-base * 1.75 !default;
+$h4-font-size:                $font-size-base * 1.5 !default;
+$h5-font-size:                $font-size-base * 1.25 !default;
+$h6-font-size:                $font-size-base !default;
+
+$p-font-size:                $font-size-base * 0.9 !default;
+
+

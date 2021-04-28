@@ -1,0 +1,83 @@
+
+
+@mixin border-table-base() {    
+    border-bottom-color: rgba(0,0,0,.12);
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+    padding: 0;
+}
+
+@mixin base-flexbox($direction: row, $flex-align: center, $flex-justify: center) {
+    display: flex;
+    flex-direction: $direction;
+    align-items: $flex-align;
+    justify-content: $flex-justify;
+}
+
+@mixin base-flex-width($direction: row, $flex-align: center, $flex-justify: center, $width-size: 1200px, $max-width-size: 100%){
+    display: flex;
+    flex-direction: $direction;
+    align-items: $flex-align;
+    justify-content: $flex-justify;
+    max-width: $max-width-size;
+    width: $width-size;
+    margin: auto;
+}
+
+@mixin absoluteFill($position) {
+    position: $position;
+    left: 0;
+    top:0;
+    bottom: 0;
+}
+@mixin font-size($size, $weight: normal){
+    font-size: $size;
+    font-weight: $weight;
+}
+
+@mixin xs {
+    @media only screen and (min-width: $screen-xs-min) and (max-width: $screen-sm-min){
+        @content;        
+    }
+}
+
+@mixin sm {
+    @media only screen and (min-width: $screen-sm-min) and (max-width: $screen-md-min){
+        @content;        
+    }
+}
+
+@mixin md {
+    @media only screen and (min-width: $screen-md-min) {
+        @content;        
+    }
+}
+
+@mixin lg {
+    @media  (min-width: #{screen-lg-min}) {
+        @content;
+    }
+}
+
+@mixin xl {
+    @media (min-width: #{screen-xl-min}) {
+        @content;        
+    }
+}
+
+@mixin mobile {
+    @media (max-width: #{900px}) {
+        @content;        
+    }
+}
+
+@mixin create-grid-media($breakpoint) {
+    
+    @if($breakpoint == 0){
+        @content;
+    }@else {
+        @media screen and (min-width: $breakpoint * 1px) {
+            @content;
+        }
+    }
+}

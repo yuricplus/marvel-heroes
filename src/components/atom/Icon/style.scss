@@ -1,0 +1,10 @@
+.icon {
+    
+    &.icon-search {
+        position: relative;
+        &::after {
+            content: url('../../../assets/busca/Lupa/Shape@1\,5x.svg');
+            color: red;
+        }
+    }
+}

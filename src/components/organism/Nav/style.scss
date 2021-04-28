@@ -1,0 +1,26 @@
+@import '../../../scss/abstract/variables.scss';
+
+.container-header {
+    width: 1000px;
+    max-width: 100%;
+    margin: auto;
+
+    .content-center {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+
+        .title-font {
+            font-size: $h1-font-size;
+            color: $gray-300;
+            font-weight: $font-weight-bold;
+            margin: 15px;
+        }
+        
+        .description {
+            font-size: $p-font-size;
+            color: $gray-300;
+            font-weight: $font-weight-normal;
+        }
+    }
+}

@@ -1,0 +1,11 @@
+.header-logo { 
+    text-indent: -999%;
+    width: 300px;
+    
+    &.logo-image-lg {
+        background-image: url('../../../assets/logo/Group@1\,5x.svg');
+        background-size: 100% auto;
+        height: 100px;
+        background-repeat: no-repeat;
+    }
+}
