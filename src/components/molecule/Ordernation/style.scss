@@ -1,0 +1,27 @@
+@import '../../../scss/abstract/mixins';
+@import '../../../scss/abstract//variables.scss';
+
+.cnt-ordenation {
+    max-width: 1200px;
+    width: 100%;
+    margin: auto;
+
+    .content {
+        position: relative;
+
+        @include base-flexbox(row, center, space-between);
+
+        .itens-algn-right {
+            @include base-flexbox(row, center, space-between);
+        }
+
+        .icon-label {
+            margin: auto 15px;
+            @include base-flexbox(row, center, space-between);
+
+            * {
+                padding: 0 10px;
+            }
+        }
+    }
+}
