@@ -1,16 +1,16 @@
 import { BrowserRouter, Switch, Route } from 'react-router-dom'
-import './App.scss';
-import { HomePage } from 'components/pages/Home'
+import './App.scss'
+import { HomePage } from './components/pages/Home'
 
 function App() {
   return (
-   <BrowserRouter>
+    <BrowserRouter>
       <Switch>
-        <Route path="/" component={HomePage}/>
-        <Route path="/hero-details/:id" component={() => <div>oi</div>}/>
+        <Route path="/" component={HomePage} />
+        <Route path="/hero-details/:id" component={() => <div>oi</div>} />
       </Switch>
-   </BrowserRouter>
-  );
+    </BrowserRouter>
+  )
 }
 
-export default App;
+export default App

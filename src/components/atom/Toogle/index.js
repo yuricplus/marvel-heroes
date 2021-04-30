@@ -1,17 +1,17 @@
-import React from "react";
+import React from 'react'
 
 import './style.scss'
 
 const Toggle = (props) => {
   const {
-    size = "default",
+    size = 'default',
     checked,
     onChange,
-    offstyle = "btn-danger",
-    onstyle = "btn-success"
-  } = props;
+    offstyle = 'btn-danger',
+    onstyle = 'btn-success',
+  } = props
 
-  let displayStyle = checked ? onstyle : offstyle;
+  const displayStyle = checked ? onstyle : offstyle
   return (
     <>
       <label>
@@ -19,7 +19,7 @@ const Toggle = (props) => {
           <input
             type="checkbox"
             checked={checked}
-            onChange={e => onChange(e)}
+            onChange={(e) => onChange(e)}
           />
           <span className={`${displayStyle} switch`}>
             <span className="switch-handle" />
@@ -27,7 +27,7 @@ const Toggle = (props) => {
         </span>
       </label>
     </>
-  );
+  )
 }
 
-export default Toggle;
+export default Toggle
