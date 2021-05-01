@@ -18,4 +18,18 @@ function getHeroes(params) {
     .catch((err) => err)
 }
 
-export { getHeroes }
+function getHeroById(id) {
+  return service
+    .get(`/characters/${id}`)
+    .then((data) => data)
+    .catch((err) => err)
+}
+
+function getSeriesByHeroId(id) {
+  return service
+    .get(`/characters/${id}/series`)
+    .then((data) => data)
+    .catch((err) => err)
+}
+
+export { getHeroes, getHeroById, getSeriesByHeroId }

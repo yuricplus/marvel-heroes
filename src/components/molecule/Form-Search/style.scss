@@ -12,6 +12,18 @@
         height: 50px;
         border-radius: 100px;
 
+        &.light {
+            background-color: $white;
+
+            input.input-search {
+
+                &::placeholder {
+                    color: $gray-200;
+                    font-weight: $font-weight-bold;
+                }
+            }
+        }
+
         input.input-search {
             outline: none;
             border: none;

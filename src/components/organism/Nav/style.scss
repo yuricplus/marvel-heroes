@@ -10,6 +10,15 @@
         align-items: center;
         flex-direction: column;
 
+        &.size-sm {
+            flex-direction: row !important;
+            justify-content: space-around;
+
+            .title-font, .description {
+                display: none;
+            }
+        }
+
         .title-font {
             font-size: $h1-font-size;
             color: $gray-300;

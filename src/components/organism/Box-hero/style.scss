@@ -1,0 +1,59 @@
+@import '../../../scss/abstract/variables.scss';
+
+.container-box {
+    width: 1000px;
+    max-width: 100%;
+    margin: 50px auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+
+    .bg-name {
+        position: absolute;
+        font-size: 200px;
+        font-weight: $font-weight-bolder;
+        color: $white;
+        left: 0;
+        top: 0;
+        text-transform: uppercase;
+        user-select: none;
+    }
+
+    .cnt-texts {
+        width: 330px;
+        max-width: 100%;
+        z-index: 1;
+
+        .cnt-tlt {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin: 30px auto;
+
+            h1 {
+                text-transform: uppercase;
+            }
+
+            span {
+                margin: 10px 0px;
+                font-size: $p-font-size;
+                font-weight: $font-weight-bold;
+                color: $gray-300;
+            }
+
+            p {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                font-weight: $font-weight-bold;
+                color: $gray-200;
+
+                i {
+                    padding-right: 20px;
+                    padding-top: 10px;
+                }
+            }
+        }
+    }
+}
