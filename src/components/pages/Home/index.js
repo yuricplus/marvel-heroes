@@ -1,17 +1,59 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 
 import { Home } from '../../templates/Home'
 import { getHeroes } from '../../../shared/services'
 
 export const HomePage = () => {
-  useEffect(() => {
-    handleListHeroes()
-  })
+  const [heroes, setHeroes] = useState(null)
+  const [checked, setChecked] = useState(false)
+  const [loading, setLoading] = useState(true)
 
   const handleListHeroes = async () => {
-    const data = await getHeroes()
-    console.log(data)
+    setLoading(true)
+    const response = await getHeroes(checked ? '-name' : 'name')
+    try {
+      setHeroes(response.data.data)
+      setLoading(false)
+    } catch (error) {
+      setHeroes({
+        count: 0,
+        result: [],
+      })
+      setLoading(false)
+    }
   }
 
-  return <Home />
+  const handleOrdenationByName = (e) => {
+    setChecked(e.target.checked)
+  }
+
+  const handleFavHero = async (heroId) => {
+    let listFavStorage =
+      JSON.parse(localStorage.getItem('listFavStorage')) || []
+
+    if (listFavStorage.includes(heroId)) {
+      listFavStorage = await listFavStorage.filter((item) => item !== heroId)
+
+      localStorage.setItem('listFavStorage', JSON.stringify(listFavStorage))
+      return
+    }
+    if (!listFavStorage.includes(heroId)) {
+      listFavStorage.push(heroId)
+      localStorage.setItem('listFavStorage', JSON.stringify(listFavStorage))
+    }
+  }
+
+  useEffect(() => {
+    handleListHeroes()
+  }, [checked])
+
+  return (
+    <Home
+      data={heroes}
+      ordernationChange={handleOrdenationByName}
+      checked={checked}
+      loading={loading}
+      favHero={handleFavHero}
+    />
+  )
 }
