@@ -3,9 +3,14 @@
     width: 300px;
     
     &.logo-image-lg {
-        background-image: url('../../../assets/logo/Group@1\,5x.svg');
+        background-image: url('../../../assets/logo/Group@3x.png');
         background-size: 100% auto;
         height: 100px;
         background-repeat: no-repeat;
+    }
+
+    &.size-sm {
+        background-image: url('../../../assets/logo/Group@2x.png');
+        background-size: 70% auto;
     }
 }

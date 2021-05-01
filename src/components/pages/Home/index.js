@@ -15,10 +15,7 @@ export const HomePage = () => {
       setHeroes(response.data.data)
       setLoading(false)
     } catch (error) {
-      setHeroes({
-        count: 0,
-        result: [],
-      })
+      setHeroes(null)
       setLoading(false)
     }
   }

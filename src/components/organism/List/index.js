@@ -1,8 +1,9 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 
 import { Ordernation } from '../../molecule/Ordernation'
 import Hero from '../../molecule/Hero'
-import Loading from '../../molecule/Loading'
+import Loading from '../../Loading'
 
 import './style.scss'
 
@@ -39,3 +40,11 @@ export const List = ({
     </div>
   </section>
 )
+
+List.prototype = {
+  data: PropTypes.object,
+  ordernationChange: PropTypes.func,
+  checked: PropTypes.bool,
+  loading: PropTypes.bool,
+  favHero: PropTypes.func,
+}

@@ -3,9 +3,9 @@ import { Link } from 'react-router-dom'
 
 import './style.scss'
 
-const Logo = () => (
+const Logo = ({ size }) => (
   <Link to="/">
-    <div className="logo-image-lg header-logo"></div>
+    <div className={`logo-image-lg header-logo size-${size}`}></div>
   </Link>
 )
 
