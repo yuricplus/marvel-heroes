@@ -7,6 +7,20 @@ body *{
   font-family: $font-family-work-sans;
 }
 
+.text {
+  font-size: $p-font-size;
+  color: $gray-300;
+}
+
+.btn-transparent {
+  border: none;
+  background-color: transparent;
+}
+
+.bold {
+  font-weight: $font-weight-bold;
+}
+
 .color-red {
   color: $red;
 }
