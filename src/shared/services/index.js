@@ -11,9 +11,9 @@ service.interceptors.request.use((config) => {
   return config
 })
 
-function getHeroes() {
+function getHeroes(params) {
   return service
-    .get('/comics')
+    .get(`/characters?orderBy=${params}`)
     .then((data) => data)
     .catch((err) => err)
 }
