@@ -1,5 +1,7 @@
 import React from 'react'
 
+import './style.scss'
+
 const Card = (props) => {
   const { image, text } = props
   return (
