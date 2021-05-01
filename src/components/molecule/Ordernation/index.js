@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React from 'react'
 
 import Icon from '../../atom/Icon'
 import Toggle from '../../atom/Toogle'
@@ -6,13 +6,15 @@ import Toggle from '../../atom/Toogle'
 import './style.scss'
 
 export const Ordernation = (props) => {
-  const { label, firtsIcon, secondIcon, secondText, firstText } = props
-  const [checked, setChecked] = useState(false)
-
-  const handleChange = (e) => {
-    setChecked(e.target.checked)
-    console.log('oi')
-  }
+  const {
+    label,
+    firtsIcon,
+    secondIcon,
+    secondText,
+    firstText,
+    ordernationChange,
+    checked,
+  } = props
 
   return (
     <section className="cnt-ordenation">
@@ -30,13 +32,13 @@ export const Ordernation = (props) => {
               checked={checked}
               size="default"
               disabled={false}
-              onChange={handleChange}
+              onChange={ordernationChange}
               offstyle="btn-danger"
               onstyle="btn-success"
             />
           </div>
           <div className="icon-label">
-            <Icon name={secondIcon} />
+            <Icon name={secondIcon} click="pointer" />
             <span className="label-text color-red">{secondText}</span>
           </div>
         </div>
