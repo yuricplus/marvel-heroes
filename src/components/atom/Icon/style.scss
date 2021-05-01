@@ -6,6 +6,9 @@
             content: url('../../../assets/busca/Lupa/Shape@1\,5x.svg');
         }
     }
+    &.pointer {
+        cursor: pointer;
+    }
     &.icon-heroes {
         position: relative;
         &::after {
@@ -14,14 +17,20 @@
     }
     &.icon-heart {
         position: relative;
+        transition: 1s all;
         &::after {
-            content: url('../../../assets//icones/heart/Path.svg');
+            content: url('../../../assets//icones/heart/Path\ Copy\ 2@1\,5x.svg');
+        }
+        &:hover {
+            &::after {
+                content: url('../../../assets//icones/heart/Path\ Copy\ 7.svg') !important;
+            }
         }
     }
     &.icon-heart-liked {
         position: relative;
         &::after {
-            content: url('../../../assets/icones/heart/Path@1\,5x.svg');
+            content: url('../../../assets//icones/heart/Path\ Copy\ 7.svg');
         }
     }
     &.icon-books {
