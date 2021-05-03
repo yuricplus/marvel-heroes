@@ -9,29 +9,38 @@ const HeroesDetailsPage = () => {
   const { id } = useParams()
   const [hero, setHero] = useState(null)
   const [series, setSeries] = useState(null)
+  const [loading, setLoading] = useState(false)
 
   const handleSerieInfo = async () => {
     try {
+      setLoading(true)
       const seriesData = await getSeriesByHeroId(id)
-      setSeries([seriesData.data.data.results])
+      setSeries(seriesData.data.data.results)
+      setLoading(false)
     } catch (error) {
       setSeries(null)
+      setLoading(false)
     }
   }
 
   const handleHeroInformation = async () => {
     try {
+      setLoading(true)
       const response = await getHeroById(id)
       setHero(response.data.data.results)
       handleSerieInfo()
+      setLoading(false)
     } catch (error) {
       setHero(null)
+      setLoading(false)
     }
   }
 
-  useEffect(() => handleHeroInformation())
+  useEffect(() => {
+    handleHeroInformation()
+  }, [])
 
-  return <HeroDetails hero={hero} series={series} />
+  return <HeroDetails hero={hero} series={series} isloading={loading} />
 }
 
 export default HeroesDetailsPage

@@ -2,6 +2,7 @@ import React from 'react'
 
 import Nav from '../../organism/Nav'
 import { List } from '../../organism/List'
+import Pagination from '../../organism/Pagination'
 
 export const Home = ({
   data,
@@ -9,6 +10,7 @@ export const Home = ({
   checked,
   loading,
   favHero,
+  offset,
 }) => (
   <section>
     <Nav />
@@ -19,5 +21,6 @@ export const Home = ({
       loading={loading}
       favHero={favHero}
     />
+    <Pagination offset={offset} />
   </section>
 )

@@ -11,9 +11,20 @@ service.interceptors.request.use((config) => {
   return config
 })
 
-function getHeroes(params) {
+function getHeroes(params, page) {
   return service
-    .get(`/characters?orderBy=${params}`)
+    .get(`/characters?orderBy=${params}&offset=${page.split('=')[1]}`)
+    .then((data) => data)
+    .catch((err) => err)
+}
+
+function getHeroesSearch(params, search) {
+  return service
+    .get(
+      `/characters?orderBy=${params}&name=${
+        search ? search.split('=')[1] : ''
+      }`,
+    )
     .then((data) => data)
     .catch((err) => err)
 }
@@ -27,9 +38,9 @@ function getHeroById(id) {
 
 function getSeriesByHeroId(id) {
   return service
-    .get(`/characters/${id}/series`)
+    .get(`/characters/${id}/comics`)
     .then((data) => data)
     .catch((err) => err)
 }
 
-export { getHeroes, getHeroById, getSeriesByHeroId }
+export { getHeroes, getHeroById, getSeriesByHeroId, getHeroesSearch }
