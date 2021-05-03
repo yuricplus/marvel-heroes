@@ -3,6 +3,8 @@ import './App.scss'
 
 import { HomePage } from './components/pages/Home'
 import HeroDetailsPage from './components/pages/Heroes-details'
+// eslint-disable-next-line import/no-unresolved
+import Footer from './components/organism/Footer'
 
 function App() {
   return (
@@ -12,6 +14,7 @@ function App() {
         <Route path="/hero-details/:id" exact component={HeroDetailsPage} />
         <Redirect to="/" />
       </Switch>
+      <Footer />
     </BrowserRouter>
   )
 }
