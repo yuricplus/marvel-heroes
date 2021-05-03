@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 
 import { Ordernation } from '../../molecule/Ordernation'
 import Hero from '../../molecule/Hero'
-import Loading from '../../Loading'
+import Loading from '../../molecule/Loading'
 
 import './style.scss'
 

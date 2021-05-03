@@ -57,3 +57,22 @@
         }
     }
 }
+
+.list-series {
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    max-width: 100%;
+    width: 1000px;
+    margin: auto;
+
+    .cnt-card {
+        width: 100px;
+        height: 100px;
+        margin: 50px 15px;
+
+        img {
+            height: auto !important;
+        }
+    }
+}

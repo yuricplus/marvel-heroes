@@ -18,6 +18,42 @@ h1 {
   font-weight: $font-weight-bold;
 }
 
+footer.footer {
+  background-color: $red;
+  width: 100%;
+  height: 100px;
+}
+
+button.btn-transparent {
+  border: none;
+  background-color: transparent;
+}
+
+.cnt-pagination {
+  width: 1200px;
+  max-width: 100%;
+  margin: auto;
+  overflow: hidden;
+}
+
+button.btn-page {
+  background-color: $white;
+  padding: 10px;
+  margin: 5px;
+  width: 40px;
+  border-radius: 8px;
+  border: 2px solid $red;
+  color: $red;
+  font-weight: $font-weight-bold;
+  transition: all 1s;
+  cursor: pointer;
+
+  &:hover {
+    background-color: $red;
+    color: $white;
+  }
+}
+
 h2
 
 .btn-transparent {
